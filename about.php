@@ -1,22 +1,22 @@
 <?php
-    $con = mysqli_connect('localhost','root');
+  $con = mysqli_connect('localhost','root');
 
-    if($con) {
-        echo "Connection Successful";
-    }
-    else {
-        echo "Connection Failed";
-    }
+  mysqli_select_db($con, 'designs');
 
-    mysqli_select_db($con, 'designs');
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $number = $_POST['number'];
+  $description = $_POST['description'];
 
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $number = $_POST['number'];
+  $query = "INSERT INTO users (name, email, number, description) VALUES ('$name', '$email', '$number', '$description')";
 
-    $query = "INSERT INTO users (name, email, number) VALUES ('$name', '$email', '$number')";
+  mysqli_query($con, $query);
 
-    mysqli_query($con, $query);
-    header('location:index.php#contact');
+  if($con) {
+      header('location:thankyou.php');
+  }
+  else {
+      echo "Connection Failed";
+  }  
 
 ?>
