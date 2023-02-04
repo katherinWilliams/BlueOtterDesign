@@ -46,7 +46,7 @@
     </nav>
      
     <div class="logo">
-      <img src="images/blueOtterLogo2.jpg" class="d-block w-80" alt="Blue Otter Design Logo">
+      <img style="width: 500px; height: 180px;" src="images/blueOtterLogo2.jpg" class="d-block w-80" alt="Blue Otter Design Logo">
     </div>   
 
     <a id="invitations">
@@ -129,7 +129,7 @@
                     <img src="images/blueOtterLogo3.jpg" class="img-fluid pb-3">
                   </div>
                   <div class="col-lg-4 col-md-4 col-12">
-                    <img src="images/myLogo2.jpg" class="img-fluid pb-3">
+                    <img src="images/myLogo3.jpg" class="img-fluid pb-3">
                   </div>
                   <div class="col-lg-4 col-md-4 col-12">
                     <img src="images/tolkien2.jpg" class="img-fluid pb-3">
@@ -190,12 +190,16 @@
               </div>
               <div class="form-group">
                 <label>Email:</label>
-                <input type="email" name="email" placeholder="sample@gmail.com" class="form-control"> 
+                <input type="email" name="email" required="required" placeholder="sample@gmail.com" class="form-control"> 
               </div>
               <div class="form-group">
                 <label for="#phone-input">Phone Number:<span class="required"></span></label>
-                <input id="phone-input" type="tel" value="" name="number" placeholder="(555)-555-5555" class="form-control"> 
+                <input id="phone-input" type="tel" required="required" value="" name="number" placeholder="(555)-555-5555" class="form-control"> 
               </div>
+              <div class="form-group">
+                <textarea id="description" name="description" required="required" rows="4"  class="form-control" 
+                placeholder="Briefly describe what you need created (500 character limit)"></textarea>
+              </div> 
               <button type="submit" class="btn btn-success">Submit</button>
             </form>
           </div>
